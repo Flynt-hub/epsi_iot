@@ -1,0 +1,21 @@
+remarque sur les étapes à faire
+
+lancer "arduino IDE" en super utilisateur pour accorder les droits d'écrire sur l'ESP45
+tool -> boards -> ESP8266 board -> node MCU 1.0 (ESP 12E module)
+le capteur de temperature est un Dallas DS18B20
+resistance 4700 ohm a 5v -> 3000 ohm à 3.3v (dernière utilisée : jaune/violet/noir/marron/marron)
+specification du capteur https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf
+image avec le nom des entrées en C https://i2.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png?quality=100&strip=all&ssl=1
+
+capteur de temperature/humidité : ASAIR DHT11
+
+
+capteur de lumiere grove light sensor
+pas de besoin d'inclure de librairie, il suffit de lire les valeur directement en analogique
+il y a besoin d'utiliser une arduino uno au lieu de l'ESP86 car le capteur necessite 5 volts
+!!! préférer l'ESP pour sa connectivité wifi !!!
+
+mettre en place le conteneur docker avec node-RED et mosquitto
+depuis le repertoire avec les images docker :
+docker-compose up -d
+docker-compose logs -f
